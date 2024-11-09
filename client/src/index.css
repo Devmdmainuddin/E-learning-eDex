@@ -75,7 +75,7 @@ overflow: visible !important;
   bottom: -50px !important;
   top: var(--swiper-pagination-top, auto);
   left: 20% !important;
-  width: 50%;
+  width: 50% !important;
  
 }
 .swiper-pagination {

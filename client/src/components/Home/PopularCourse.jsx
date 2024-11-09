@@ -86,6 +86,7 @@ const PopularCourse = () => {
 
                     <Swiper
                             loop={true}
+                            autoplay={true}
                             navigation={true}
                             pagination={true}
                             modules={[Navigation,Pagination]}
