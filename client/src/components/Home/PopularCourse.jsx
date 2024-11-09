@@ -78,7 +78,7 @@ const PopularCourse = () => {
             <Container>
                 <div className="flex gap-6 justify-between items-center flex-col sm:flex-row">
                     <div className="w-full sm:w-1/4 py-6 sm:py-[100px] mx-auto">
-                        <h1 className="text-center text-[33px] font-semibold  text-[#20B486]"><span className="text-[#06241B]">Most</span>  <span className="text-[#20B486] relative after:content-[''] after:bg-[url('/Vector.png')] after:absolute after:w-[85px] md:after:w-[155px] after:h-[6px] after:left-0 after:-bottom-2 after:inline-block">Popular</span>  
+                        <h1 className="text-center text-[33px] font-semibold  text-[#06241B]">Most  <span className="text-[#20B486] relative after:content-[''] after:bg-[url('/Vector.png')] after:absolute after:w-[85px] md:after:w-[155px] after:h-[6px] after:left-0 after:-bottom-2 after:inline-block px-2">Popular</span>  
                         Course</h1>
                         <p className="text-center text-[20px] font-normal leading-[28px] text-[#6D737A] mt-3">Various versions have evolved over the years, sometimes by accident,</p>
                     </div>

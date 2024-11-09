@@ -1,6 +1,7 @@
 
-import Categorys from '../../components/Categorys';
+import Categorys from '../../components/Home/Categorys';
 import Hero from '../../components/Home/Hero';
+import Instructor from '../../components/Home/Instructor';
 import PopularCourse from '../../components/Home/PopularCourse';
 
 const Home = () => {
@@ -9,6 +10,7 @@ const Home = () => {
         <Hero></Hero>
         <PopularCourse></PopularCourse>
         <Categorys></Categorys>
+        <Instructor/>
         </div>
     );
 };

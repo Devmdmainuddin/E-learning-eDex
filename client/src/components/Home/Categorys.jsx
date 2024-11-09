@@ -1,4 +1,4 @@
-import Container from "./shared/Container";
+import Container from "../shared/Container";
 import { MdOutlineArrowOutward } from "react-icons/md";
 
 const Categorys = () => {
@@ -77,12 +77,12 @@ const Categorys = () => {
         }
     ]
     return (
-        <div>
+        <div className="my-[100px]">
             <Container>
 
-                <div className=" py-6">
-                    <h1 className="text-[33px] font-semibold  text-[#20B486]"><span className="text-[#06241B]">Most</span>  <span className="text-[#20B486] relative after:content-[''] after:bg-[url('/Vector.png')] after:absolute after:w-[85px] md:after:w-[155px] after:h-[6px] after:left-0 after:-bottom-2 after:inline-block">Popular</span>
-                        Course</h1>
+                <div className=" ">
+                    <h1 className=" text-[33px] font-semibold  text-[#06241B]">Most  <span className="text-[#20B486] relative after:content-[''] after:bg-[url('/Vector.png')] after:absolute after:w-[85px] md:after:w-[155px] after:h-[6px] after:left-0 after:-bottom-2 after:inline-block px-2">Popular</span>
+                     Categorys</h1>
                     <p className=" text-[20px] font-normal leading-[28px] text-[#6D737A] mt-3">Various versions have evolved over the years, sometimes by accident,</p>
                 </div>
                 <div className="flex flex-wrap mt-[50px] gap-6">
@@ -92,10 +92,10 @@ const Categorys = () => {
                                 <img src={item.image} alt="" />
                                 <p className="text-[20px] font-medium leading-[28px] text-[#1B1D1F]">{item.name}</p>
                             </div>
-                            <span><MdOutlineArrowOutward className="text-[#20B486] text-2xl"/></span>
+                            <span><MdOutlineArrowOutward className="text-[#20B486] text-2xl" /></span>
                         </div>)
                     }
-                   
+
                 </div>
             </Container>
         </div>
