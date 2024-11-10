@@ -87,10 +87,10 @@ const Categorys = () => {
                 </div>
                 <div className="flex flex-wrap mt-[50px] gap-6">
                     {
-                        categories.map((item, idx) => <div key={idx} className="text-[#6D737A] bg-white p-6 flex items-center justify-between w-[312px] rounded-lg shadow-[0px_3px_12px_0px_rgba(75,75,75,0.08)]">
+                        categories.map((item, idx) => <div key={idx} className="text-[#6D737A] bg-white p-6 flex items-center justify-between w-[312px] rounded-lg shadow-[0px_3px_12px_0px_rgba(75,75,75,0.08)] transition-all duration-500 hover:shadow-[rgba(50,_50,_93,_0.25)_0px_50px_100px_-20px,_rgba(0,_0,_0,_0.3)_0px_30px_60px_-30px]">
                             <div className="flex gap-2 items-center">
-                                <img src={item.image} alt="" />
-                                <p className="text-[20px] font-medium leading-[28px] text-[#1B1D1F]">{item.name}</p>
+                                <img src={item.image} alt="" className="hover:scale-125 transition-all duration-500"/>
+                                <p className="text-[20px] font-medium leading-[28px] text-[#1B1D1F] hover:text-[#20B486] transition-all duration-500">{item.name}</p>
                             </div>
                             <span><MdOutlineArrowOutward className="text-[#20B486] text-2xl" /></span>
                         </div>)

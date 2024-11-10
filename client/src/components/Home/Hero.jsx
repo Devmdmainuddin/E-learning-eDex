@@ -4,7 +4,7 @@ import Image from "../shared/Image";
 import { FaStar } from "react-icons/fa";
 const Hero = () => {
     return (
-        <div className="my-[150px]">
+        <div className="md:my-[150px] mt-16">
             <Container>
                 <div className="flex gap-[50px] flex-col lg:flex-row items-center justify-center">
                     <div className="content relative">

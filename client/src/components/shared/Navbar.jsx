@@ -55,7 +55,7 @@ const Navbar = () => {
         <div>
 
             <div className="relative z-10 shadow-md w-full  duration-300 border-b border-[#e7e9eb]" >
-                <Container className='py-6'>
+                <Container className=''>
 
                     <div className="flex items-center justify-between py-6 ">
                         <div className="logo"> <Image src='/logo.png'></Image></div>
@@ -68,15 +68,12 @@ const Navbar = () => {
                                 ))}
                             </ul>
                         </nav>
-                        <div className="flex gap-6 items-center">
+                        <div className="md:flex gap-6 items-center  hidden">
                             <button className="flex gap-2 items-center"><CiLock /> Login</button>
                             <button className="p-6 bg-[#20b486] text-white rounded-[8px]">Sign up for Free</button>
                         </div>
                         {/* Profile */}
-                        <div className=" hidden md:flex w-12">
-                            {/* <Image src={user?.photoURL || '/user.png'} className='rounded-full' alt=''></Image> */}
-                            <Image src='/user.png' className='rounded full' alt=''></Image>
-                        </div>
+                        
                         {/* Hamburger */}
                         <div className="flex items-center gap-4 md:hidden ">
                             {showMenu ? (

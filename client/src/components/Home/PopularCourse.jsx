@@ -1,11 +1,11 @@
 import PopularCard from "../card/PopularCard";
 import Container from "../shared/Container";
 import { Swiper, SwiperSlide } from 'swiper/react';
-
+// import '../../style/popularCourse.css'
 import "swiper/css";
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
-import { Navigation, Pagination } from 'swiper/modules';
+import {Autoplay, Navigation, Pagination } from 'swiper/modules';
 
 
 const PopularCourse = () => {
@@ -74,22 +74,25 @@ const PopularCourse = () => {
     ]
 
     return (
-        <div className=" bg-[#EDF9F6]">
+        <div className=" bg-[#EDF9F6] py-[100px]">
             <Container>
                 <div className="flex gap-6 justify-between items-center flex-col sm:flex-row">
-                    <div className="w-full sm:w-1/4 py-6 sm:py-[100px] mx-auto">
+                    <div className="w-full sm:w-1/4  mx-auto">
                         <h1 className="text-center text-[33px] font-semibold  text-[#06241B]">Most  <span className="text-[#20B486] relative after:content-[''] after:bg-[url('/Vector.png')] after:absolute after:w-[85px] md:after:w-[155px] after:h-[6px] after:left-0 after:-bottom-2 after:inline-block px-2">Popular</span>  
                         Course</h1>
                         <p className="text-center text-[20px] font-normal leading-[28px] text-[#6D737A] mt-3">Various versions have evolved over the years, sometimes by accident,</p>
                     </div>
-                    <div className="w-full sm:w-3/4 p-6 pb-[100px] sm:py-[100px] overflow-hidden">
+                    <div className=" w-full sm:w-3/4 ">
 
                     <Swiper
                             loop={true}
-                            autoplay={true}
                             navigation={true}
                             pagination={true}
-                            modules={[Navigation,Pagination]}
+                            autoplay={{
+                                delay: 2500,
+                                disableOnInteraction: false,
+                              }}
+                            modules={[Navigation,Pagination,Autoplay]}
                             breakpoints={{
                                 320: {
                                     slidesPerView: 1,
@@ -107,7 +110,7 @@ const PopularCourse = () => {
                             }}
                             spaceBetween={10}
 
-                            className="mySwiper featured-products "
+                            className="mySwiper Popular"
                         >
                             {Popular.map((item, idx) => <SwiperSlide key={idx}>
                                 <PopularCard item={item} />

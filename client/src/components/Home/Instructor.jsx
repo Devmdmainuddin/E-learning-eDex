@@ -4,8 +4,9 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import "swiper/css";
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
-import { Navigation, Pagination } from 'swiper/modules';
-import PopularCard from "../card/PopularCard";
+import '../../style/swipers.css'
+import { Autoplay,Navigation, Pagination } from 'swiper/modules';
+
 import InstructorCard from "../card/InstructorCard";
 
 const Instructor = () => {
@@ -58,21 +59,24 @@ const Instructor = () => {
     ];
     
     return (
-        <div>
+        <div className="bg-[#F3F3F3] py-[100px]">
             <Container>
             <div className=" ">
                     <h1 className=" text-[33px] font-semibold  text-[#06241B]">Our Best  <span className="text-[#20B486] relative after:content-[''] after:bg-[url('/Vector.png')] after:absolute after:w-[85px] md:after:w-[155px] after:h-[6px] after:left-0 after:-bottom-2 after:inline-block px-2">Popular</span>
                     instructor</h1>
                     <p className=" text-[20px] font-normal leading-[28px] text-[#6D737A] mt-3">Various versions have evolved over the years, sometimes by accident,</p>
                 </div>
-                <div className="w-full  p-6 pb-[100px] sm:py-[100px] overflow-hidden">
+                <div className=" w-full mt-[50px]">
 
                     <Swiper
                             loop={true}
-                            autoplay={true}
+                            autoplay={{
+                                delay: 2500,
+                                disableOnInteraction: false,
+                              }}
                             navigation={true}
                             pagination={true}
-                            modules={[Navigation,Pagination]}
+                            modules={[Autoplay,Navigation,Pagination]}
                             breakpoints={{
                                 320: {
                                     slidesPerView: 1,
@@ -98,7 +102,7 @@ const Instructor = () => {
                             }}
                             spaceBetween={10}
 
-                            className="mySwiper featured-products "
+                            className="mySwiper instructor"
                         >
                             {instructor.map((item, idx) => <SwiperSlide key={idx}>
                                 <InstructorCard item={item} />

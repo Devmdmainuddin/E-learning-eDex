@@ -1,6 +1,6 @@
 import Image from "../shared/Image";
 import { FaStar } from "react-icons/fa";
-
+import PropTypes from 'prop-types';
 const PopularCard = ({item}) => {
     const{image,title,price,rating,category}= item;
     return (
@@ -30,5 +30,7 @@ const PopularCard = ({item}) => {
         </div>
     );
 };
-
+PopularCard.propTypes = {
+    item: PropTypes.object,
+}
 export default PopularCard;
